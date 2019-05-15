@@ -1,10 +1,8 @@
-
 use image::GenericImage;
 use ipp_sys::{
     ippiMirror_8u_C3IR, ippiResizeGetSize_8u, IppiAxis, IppiInterpolationType, IppiPoint, IppiSize,
 };
 use std::path::Path;
-
 
 #[derive(Debug)]
 pub struct ImageObject {
@@ -93,12 +91,11 @@ impl ImageObject {
             panic!("ippiResizeGetSize_8u failed with status {}", ipp_status);
         }
 
-        let mut initialization_buffer: Vec<u8> = Vec::with_capacity(initialization_buffer_size as usize);
+        let mut initialization_buffer: Vec<u8> =
+            Vec::with_capacity(initialization_buffer_size as usize);
 
         let mut specification: Vec<u8> = Vec::with_capacity(specification_size as usize);
 
-        if antialiasing != 0 {
-
-        } 
+        if antialiasing != 0 {}
     }
 }
